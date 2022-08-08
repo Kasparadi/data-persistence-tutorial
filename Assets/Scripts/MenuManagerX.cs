@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.UI;
+using TMPro;
 
 public class MenuManagerX : MonoBehaviour
 {
@@ -53,6 +55,11 @@ public class MenuManagerX : MonoBehaviour
         {
             Debug.Log("no save data");
         }
+    }
+
+    public static void FillPlayerName()
+    {
+        GameObject.Find("Name Input Field").GetComponent<TMP_InputField>().text = playerName;
     }
 
 }
